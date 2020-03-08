@@ -1,4 +1,4 @@
-#  Tp2
+﻿#  Tp2
 
 ## I. Création et utilisation simples d'une VM CentOS
 
@@ -55,6 +55,7 @@ il y a trois messages sync qui équivaut a une demande de synchronisaton, sync a
 
 ### 4. Partie Groupe
 ## A Pc1 à Pc2
+```
 maintenant on va se ping : 
 
 Envoi d’une requête 'Ping'  10.2.2.1 avec 32 octets de données :
@@ -67,7 +68,9 @@ Statistiques Ping pour 10.2.2.1:
     Paquets : envoyés = 4, reçus = 4, perdus = 0 (perte 0%),
 Durée approximative des boucles en millisecondes :
     Minimum = 0ms, Maximum = 0ms, Moyenne = 0ms
+```
 ## A Pc2 à Pc1
+```
 Envoi d’une requête 'Ping'  10.2.1.1 avec 32 octets de données :
 Réponse de 10.2.1.1 : octets=32 temps<1ms TTL=127
 Réponse de 10.2.1.1 : octets=32 temps<1ms TTL=127
@@ -78,11 +81,13 @@ Statistiques Ping pour 10.2.1.1:
     Paquets : envoyés = 4, reçus = 4, perdus = 0 (perte 0%),
 Durée approximative des boucles en millisecondes :
     Minimum = 0ms, Maximum = 0ms, Moyenne = 0ms
+```
 
 ### maintenant que nos deux pc peuvent se ping on va passé de vm a pc et de vm a vm.
 
 ## C VM1 à Pc1
 
+```
 [root@localhost]# ping 10.2.1.1
 PING 10.2.2.1 (10.2.2.1) 56(84) bytes of data.
 64 bytes from 10.2.2.1: icmp_seq=1 ttl=64 time=3.2 ms
@@ -93,8 +98,10 @@ PING 10.2.2.1 (10.2.2.1) 56(84) bytes of data.
 --- 10.2.2.1 ping statistics ---
 4 packets transmitted, 4 received, 0% packet loss, time 1000ms
 rtt min/avg/max/mdev = 0.086/1.801/1.176/1.805 ms
+```
 ## D VM2 à Pc2
 
+```
 [root@localhost]# ping 10.2.2.1
 PING 10.2.2.1(10.2.1.1) 56(84) bytes of data.
 64 bytes from 10.2.1.1: icmp_seq=1 ttl=64 time=2.9 ms
@@ -105,9 +112,11 @@ PING 10.2.2.1(10.2.1.1) 56(84) bytes of data.
 --- 10.2.1.1 ping statistics ---
 4 packets transmitted, 4 received, 0% packet loss, time 1000ms
 rtt min/avg/max/mdev = 0.086/1.891/1.196/1.655 ms
+```
 
 ## E Vm2 a Vm1
 
+```
 [root@localhost]# ping 10.2.2.10
 PING 10.2.2.10(10.2.1.10) 56(84) bytes of data.
 64 bytes from 10.2.1.10: icmp_seq=1 ttl=64 time=1.00 ms
@@ -118,7 +127,7 @@ PING 10.2.2.10(10.2.1.10) 56(84) bytes of data.
 --- 10.2.1.10 ping statistics ---
 4 packets transmitted, 4 received, 0% packet loss, time 1000ms
 rtt min/avg/max/mdev = 2.086/0.891/0.696/0.125 ms
+```
 
 ## 3  Configuration des noms de domaine
 
-je n'es pas pu la faire malheuresement car mon second pc ne support pas de vm.
